@@ -36,6 +36,62 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.remove("active");
   });
 
+  // vongquay
+  const value = "iPhone";
+
+  const gift = [
+    "iPhone",
+    "sacduphong",
+    "logo",
+    "sacduphong",
+    "loa",
+    "tainghe",
+    "loa",
+    "sacduphong",
+    "tainghe",
+    "sacduphong",
+    "loa",
+    "sacduphong",
+  ];
+  const soOQua = gift.length;
+  const gocMotO = 360 / soOQua;
+  const oTrungThuong = gift.indexOf(value);
+
+  document
+    .querySelector(".lucky-icon-btn")
+    .addEventListener("click", function () {
+      if (oTrungThuong === -1) {
+        alert("Không tìm thấy quà");
+        return;
+      }
+      const vongquay = document.querySelector(".vongquay");
+      const soVong = 4;
+      const gocLech = 30;
+      const gocQuay =
+        soVong * 360 - oTrungThuong * gocMotO + (gocMotO / 2 - gocLech);
+
+      vongquay.style.transform = `rotate(${gocQuay}deg)`;
+
+      setTimeout(() => {
+        document.querySelector(".popup.popup-quaythuong").classList.add("active");
+        const popupImg = document.querySelector(".popup-quaythuong .popup-img");
+        switch (value) {
+          case "iPhone":
+            popupImg.src = `./images/iPhone.svg`;
+            break;
+          case "tainghe":
+            popupImg.src = `./images/tainghe.svg`;
+            break;
+          case "loa":
+            popupImg.src = `./images/loa.svg`;
+            break;
+          default:
+            popupImg.src = `./images/sacduphong.svg`;
+        }
+
+      }, 4000);
+    });
+
   // popup
   const btnClose = document.querySelectorAll(".btn-close-popup");
   btnClose.forEach((item) => {

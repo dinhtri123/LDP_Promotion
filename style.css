@@ -1046,7 +1046,22 @@ header {
 }
 .spin-img {
   position: relative;
-  margin-top: -40px;
+}
+.spin-img .lucky-icon-arrow {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform:translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+.spin-img .lucky-icon-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 75px;
+  cursor: pointer;
 }
 .spin-img > img {
   max-width: 545px;
@@ -1068,6 +1083,12 @@ header {
   margin-top: -20px;
   width: 100%;
 } 
+.vongquay {
+  transition: transform 3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .banner h1:before,
   .banner h1:after {
@@ -1333,6 +1354,12 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .spin-img .lucky-icon-arrow {
+    max-width: 60px;
+  }
+  .spin-img .lucky-icon-btn {
+    max-width: 50px;
+  }
   .banner p {
     font-size: 16px;
     padding: 0;
