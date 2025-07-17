@@ -966,6 +966,7 @@ header {
   border-bottom: 1px solid #f5f5f5;
 }
 #result {
+  min-height: 80vh;
   padding: 50px 0px;
   background-color: #fff;
 }
@@ -986,7 +987,7 @@ header {
 }
 #result table tr {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 3.5fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
 }
 #result table tr th,
 #result table tr td {
@@ -1396,7 +1397,7 @@ header {
     font-size: 20px;
   }
   #result table tr {
-    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1.5fr 1.3fr 1.3fr 1.2fr 1.5fr;
   }
   #result table tr th,
   #result table tr td {
